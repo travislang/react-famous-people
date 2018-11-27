@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './FamousPerson.css'
+
 
 class FamousPerson extends Component {
     constructor(props){
@@ -23,10 +25,9 @@ class FamousPerson extends Component {
     handleClick = () => {
         console.log('Famous Person\'s name:', this.state.person.name, 'Famous person\'s role:', this.state.person.role );
     }
-
     render() {
         return (
-            <div>
+            <div className='famousPersonContainer'>
                 <input type='text' placeholder='name' onChange={this.handleChange('name')} />
                 <input type='text' placeholder='role' onChange={this.handleChange('role')} />
                 <button onClick={this.handleClick}>Log To Console</button>

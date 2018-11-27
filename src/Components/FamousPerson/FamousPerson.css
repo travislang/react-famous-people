@@ -1,0 +1,18 @@
+.famousPersonContainer {
+    margin: 10vmin;
+}
+
+input {
+    width: 40vmin;
+    margin-right: 5vmin; 
+}
+
+button {
+    font-size: calc(8px + 2vmin);
+    background-color: rgb(97, 231, 119);
+    border-radius: 5%;
+}
+p {
+    font-size: calc(10px + 5vmin);
+    color: rgb(29, 195, 198);
+}

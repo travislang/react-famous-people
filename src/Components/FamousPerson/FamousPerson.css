@@ -3,11 +3,14 @@
 }
 
 input {
-    width: 40vmin;
-    margin-right: 5vmin; 
+    width: 45vmin;
+    height: 7vmin;
+    margin-right: 5vmin;
+    font-size: calc(8px + 2vmin);
 }
 
 button {
+    height: 7vmin;
     font-size: calc(8px + 2vmin);
     background-color: rgb(97, 231, 119);
     border-radius: 5%;

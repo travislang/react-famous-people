@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FamousPersonForm from '../FamousPersonForm/FamousPersonForm'
+import FamousPersonForm from '../FamousPersonForm/FamousPersonForm';
+import FamousPersonList from '../FamousPersonList/FamousPersonList';
 import './FamousPerson.css'
 
 
@@ -48,12 +49,17 @@ class FamousPerson extends Component {
     render() {
         
         return (
-            <FamousPersonForm 
-            person={this.state.person}
-            people={this.state.people}
-            handleChange={this.handleChange}
-            handleClick={this.handleClick}
-            />
+            <div>
+                <FamousPersonForm
+                    person={this.state.person}
+                    people={this.state.people}
+                    handleChange={this.handleChange}
+                    handleClick={this.handleClick}
+                />
+                <FamousPersonList 
+                    people={this.state.people}
+                />
+            </div>
         );
     }
 }

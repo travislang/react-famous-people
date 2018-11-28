@@ -9,7 +9,17 @@ class FamousPerson extends Component {
             person: {
                 name: '',
                 role: ''
-            } 
+            },
+            people: [
+                {
+                    name: 'Mark Zuckerberg',
+                    role: 'developer'
+                },
+                {
+                    name: 'Steve Woz',
+                    role: 'Apple founder'
+                }
+            ]
         }
     }
     handleChange = (propName) => {

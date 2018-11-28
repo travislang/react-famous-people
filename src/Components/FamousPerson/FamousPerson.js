@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FamousPersonForm from '../FamousPersonForm/FamousPersonForm'
 import './FamousPerson.css'
 
 
@@ -45,18 +46,14 @@ class FamousPerson extends Component {
         })
     }
     render() {
-        let htmlList = this.state.people.map( (person, i) => {
-            return <li key={i}>{person.name}</li>
-        })
+        
         return (
-            <div className='famousPersonContainer'>
-                <input type='text' placeholder='name' onChange={this.handleChange('name')} value={this.state.person.name} />
-                <input type='text' placeholder='role' onChange={this.handleChange('role')} value={this.state.person.role} />
-                <button onClick={this.handleClick}>Add To List</button>
-                <ul>
-                    {htmlList}
-                </ul>
-            </div>
+            <FamousPersonForm 
+            person={this.state.person}
+            people={this.state.people}
+            handleChange={this.handleChange}
+            handleClick={this.handleClick}
+            />
         );
     }
 }

@@ -33,15 +33,29 @@ class FamousPerson extends Component {
         }
     }
     handleClick = () => {
-        console.log('Famous Person\'s name:', this.state.person.name, 'Famous person\'s role:', this.state.person.role );
+        this.setState({
+            people: [
+                ...this.state.people,
+                this.state.person
+            ],
+            person: {
+                name: '',
+                role: ''
+            }
+        })
     }
     render() {
+        let htmlList = this.state.people.map( (person, i) => {
+            return <li key={i}>{person.name}</li>
+        })
         return (
             <div className='famousPersonContainer'>
-                <input type='text' placeholder='name' onChange={this.handleChange('name')} />
-                <input type='text' placeholder='role' onChange={this.handleChange('role')} />
-                <button onClick={this.handleClick}>Log To Console</button>
-                <p>{this.state.person.name} is famous for "{this.state.person.role}"</p>
+                <input type='text' placeholder='name' onChange={this.handleChange('name')} value={this.state.person.name} />
+                <input type='text' placeholder='role' onChange={this.handleChange('role')} value={this.state.person.role} />
+                <button onClick={this.handleClick}>Add To List</button>
+                <ul>
+                    {htmlList}
+                </ul>
             </div>
         );
     }
